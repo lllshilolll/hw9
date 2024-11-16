@@ -50,13 +50,12 @@ class HomeWorkTest {
     private void execute(String pattern) {
         try (
                 InputStream in = new FileInputStream("upit/" + String.format(pattern, "in"));
-                OutputStream answer = new FileOutputStream("target/" + String.format(pattern, "answer"), false);
+                OutputStream answer = new FileOutputStream("target/" + String.format(pattern, "answer"), false)
         ) {
             HomeWork hw = new HomeWork();
             hw.upit(in, answer);
 
         }
-
     }
 
 }
